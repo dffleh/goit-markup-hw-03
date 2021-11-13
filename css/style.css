@@ -8,6 +8,8 @@
   --background-footer: #2f303a;
   --background-team: #f5f4fa;
   --background-hero: #2f303a;
+
+  --filter-gap: 30px;
 }
 
 p,
@@ -350,7 +352,7 @@ section {
 
 /*-----------------------------------portfolio----------------------------------*/
 
-.filters-list {
+.filter-list {
   display: flex;
   justify-content: center;
   margin-bottom: 50px;
@@ -380,9 +382,31 @@ section {
 }
 
 .filter-img-title {
-  font-weight: bold;
+  margin-bottom: 4px;
+
+  font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--second-title-color);
+}
+
+.filter-img-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: calc(-1 * var(--filter-gap));
+  margin-bottom: calc(-1 * var(--filter-gap));
+}
+
+.filter-img-list > .filter-img-item {
+  flex-basis: calc(100% / 3 - var(--filter-gap));
+
+  margin-right: var(--filter-gap);
+  margin-bottom: var(--filter-gap);
+}
+
+.card-content {
+  border: 1px solid #eeeeee;
+  border-top: none;
+  padding: 20px 24px 20px 24px;
 }

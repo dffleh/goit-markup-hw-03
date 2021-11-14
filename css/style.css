@@ -25,6 +25,7 @@ h6 {
 ul {
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 
 button {
@@ -34,6 +35,7 @@ button {
 img {
   display: block;
   max-width: 100%;
+  height: auto;
 }
 
 body {
@@ -41,14 +43,14 @@ body {
   color: var(--main-text-color);
 }
 
-section {
+.section {
   padding-top: 94px;
   padding-bottom: 94px;
 }
 
-.list {
+/* .list {
   list-style: none;
-}
+} */
 
 .link {
   text-decoration: none;
@@ -136,8 +138,8 @@ section {
   color: var(--main-text-color);
 }
 
-.header-tel {
-  margin-left: 50px;
+.header-contact:not(:last-child) {
+  margin-right: 50px;
 }
 
 .header-logo,
@@ -149,16 +151,16 @@ section {
   padding-bottom: 24px;
 }
 
+.carend {
+  color: var(--accent-color);
+}
+
 /*---------------hero------------------*/
 
 .hero {
-  margin-left: 44px;
+  padding: 200px 0px;
 
   background-color: var(--background-hero);
-}
-
-.hero-container {
-  padding: 200px auto 200px 452px;
 }
 
 .hero-title {
@@ -215,7 +217,6 @@ section {
 .excellence-text {
   max-width: 270px;
 
-  font-weight: 700;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
@@ -225,6 +226,7 @@ section {
 .excellence-head {
   margin-bottom: 10px;
 
+  font-weight: 700;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
@@ -235,6 +237,7 @@ section {
 /*-----------------------work---------------------------*/
 
 .work {
+  padding-top: 0;
   background-color: var(--background-origin);
 }
 
@@ -267,8 +270,6 @@ section {
 }
 
 .team-text {
-  padding-bottom: 30px;
-
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
@@ -277,7 +278,6 @@ section {
 }
 
 .team-item-title {
-  margin-top: 30px;
   margin-bottom: 10px;
 
   font-weight: 500;
@@ -286,6 +286,11 @@ section {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--second-title-color);
+}
+
+.team-card {
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .team-item {
@@ -308,11 +313,9 @@ section {
 /*----------------------footer--------------------------*/
 
 .footer {
-  background-color: var(--background-footer);
-}
+  padding: 60px 0;
 
-.footer-list {
-  padding-bottom: 60px;
+  background-color: var(--background-footer);
 }
 
 .footer-item:not(:last-child) {
@@ -337,7 +340,6 @@ section {
 .footer-logo {
   display: block;
   margin-bottom: 20px;
-  padding-top: 60px;
 
   font-family: Raleway;
   font-weight: 700;
@@ -350,6 +352,10 @@ section {
   color: var(--main-title-color);
 }
 
+.footer-address {
+  font-size: normal;
+}
+
 /*-----------------------------------portfolio----------------------------------*/
 
 .filter-list {
@@ -358,8 +364,14 @@ section {
   margin-bottom: 50px;
 }
 
+.filter-item:not(:last-child) {
+  margin-right: 8px;
+}
+
 .filter-button {
-  padding: 6px 22px 6px 22px;
+  border: transparent;
+  border-radius: 4px;
+  padding: 6px 22px;
 
   font-weight: 500;
   font-size: 16px;
@@ -408,5 +420,5 @@ section {
 .card-content {
   border: 1px solid #eeeeee;
   border-top: none;
-  padding: 20px 24px 20px 24px;
+  padding: 20px 24px;
 }
